@@ -1,0 +1,53 @@
+body {
+  background-color: #0093e7 !important;
+  font-family: sans-serif;
+}
+
+h2 {
+  color: white;
+}
+
+.btn-primary {
+  float: right;
+  margin-right: 0px;
+  margin-top: 10px;
+}
+
+#container > div > div > ul {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.theList {
+  margin-top: 20px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.nav {
+  margin-bottom: 25px !important;
+}
+
+.nav li a {
+  color: white;
+}
+
+.nav li {
+  margin: 15px;
+}
+
+#accountLink {
+  float: right;
+  position: absolute;
+  clear: right;
+  width: 50%;
+}
+
+li.card {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
