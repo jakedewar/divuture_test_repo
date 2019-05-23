@@ -7,29 +7,30 @@ export default class GoalCard extends Component {
     super(props);
 
     this.createItem = this.createItem.bind(this);
-    //this.combineProps = this.combineProps.bind(this);
+
     this.delete = this.delete.bind(this)
   };
 
-  // combineProps(){
-  //   var combinedProps = this.props.entires + this.props.description
-  // };
-
-
-  //Test text
-
   createItem(item){
     return (
-      <li
-      onClick={() => this.delete(item.key)}
-      className ="card"
+      <div
+      className ="card col-9"
       key={item.key}>
-        Title: {item.titleText}
+        <div className="card-header">
+          <b>
+          {item.titleText}
+          </b>
+        </div>
         <br></br>
-        Description: {item.descriptionText}
-        <button className="btn btn-primary"> Join </button>
-        <button className="btn btn-primary"> Promote </button>
-      </li>
+        <div className="card-body">
+          {item.descriptionText}
+          <div>
+            <button className="btn btn-light"> Join </button>
+            <button className="btn btn-light"> Progress </button>
+            <button className="btn btn-light" onClick={() => this.delete(item.key)}> Delete </button>
+          </div>
+        </div>
+      </div>
   )};
 
   delete(key) {
@@ -40,14 +41,11 @@ export default class GoalCard extends Component {
 
      var titleEntry = this.props.titleEntries.map(this.createItem);
      var descriptionEntry = this.props.descriptionEntries.map(this.createItem);
-     // var listTitle = titleEntry.map(this.createItem);
-     // var listDescription = descriptionEntry.map(this.createItem);
-     //var listItems = (titleEntry + descriptionEntry);
 
     return (
-      <ul className="col-9 theList">
+      <div>
           {titleEntry}
-      </ul>
+      </div>
     )
   }
 };

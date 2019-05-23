@@ -78,7 +78,6 @@ export default class NewGoal extends Component {
         <GoalCard titleEntries={this.state.title}
                 delete={this.deleteItem}
                 descriptionEntries={this.state.description}
-                //itemEntries={this.state.title + this.state.description}
         />
     </div>)
   }

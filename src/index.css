@@ -7,20 +7,37 @@ h2 {
   color: white;
 }
 
+.btn-sm {
+  margin-left: 2px;
+}
+
+.card {
+  margin-top: 2px;
+  padding: 10px;
+}
+
+div.card-header {
+  background-color: white;
+}
+
 .btn-primary {
   float: right;
   margin-right: 0px;
   margin-top: 10px;
+  display:inline-block;
 }
 
-#container > div > div > ul {
+#container > div > div > div.col-9.theList {
   padding-left: 0px;
   padding-right: 0px;
 }
 
-.theList {
-  margin-top: 20px;
-  width: 100%;
+.btn.btn-light {
+   margin-bottom: 2px;
+   margin-top: 2px;
+   margin: 2px;
+   display: inline-block;
+   float: right;
 }
 
 input:focus {
@@ -29,6 +46,7 @@ input:focus {
 
 .nav {
   margin-bottom: 25px !important;
+  /*position: fixed;*/
 }
 
 .nav li a {
@@ -46,8 +64,10 @@ input:focus {
   width: 50%;
 }
 
-li.card {
+.card {
   padding: 10px;
   margin-top: 10px;
   width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
 }
