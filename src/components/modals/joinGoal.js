@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import GoalCard from "../GoalCard.js";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
-export default class joinGoal extends React.Component {
+export default class JoinGoal extends React.Component {
   constructor(props, context) {
     super(props, context);
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
-    this.joinGoal = this.joinGoal.bind(this);
 
     this.state = {
       show: false,
@@ -22,37 +23,27 @@ export default class joinGoal extends React.Component {
     this.setState({ show: true });
   }
 
-  getTitle(item) {
-    return(
-      <div key={item.titleText}>
-      {"Join " + item.titleText}
-      </div>
-    );
-  }
 
   render() {
 
-    var joinGoalText = this.props.titleEntries.map(this.getTitle);
+    var joinGoalTitle = this.props.titleEntries;
 
     return (
       <>
-        <Button variant="primary" onClick={this.handleShow}>
-          Join Goal
+        <Button variant="light" onClick={this.handleShow}>
+          Join
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>{joinGoalText} </Modal.Title>
+            <Modal.Title>{'Join ' + joinGoalTitle }</Modal.Title>
           </Modal.Header>
-          <Modal.Body>This goal will be added to your Goal list.</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleClose}>
-              Close
-            </Button>
+          <Modal.Body>{"This goal will be added to your Goal list under the"} <i>{"Goals"}</i> {"tab, or in:"} <i> {"Profile > Goal List >"} {joinGoalTitle} </i> </Modal.Body>
+          <div className="card-body">
             <Button variant="primary" onClick={this.handleClose}>
               Join
             </Button>
-          </Modal.Footer>
+          </div>
         </Modal>
       </>
     );

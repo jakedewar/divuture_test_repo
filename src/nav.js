@@ -19,7 +19,7 @@ class Nav extends Component {
           <a className="nav-link" href="#">Discover</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" id="accountLink" href="#">Account</a>
+          <a className="nav-link" id="accountLink" href="#">Profile</a>
         </li>
       </ul>
     );
