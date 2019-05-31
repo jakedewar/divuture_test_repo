@@ -3,9 +3,16 @@ body {
   font-family: sans-serif;
 }
 
+h1 {
+  color: white;
+  text-align: center;
+}
+
 h2 {
   color: white;
 }
+
+/* Home.js Styling */
 
 .btn-sm {
   margin-left: 2px;
@@ -91,6 +98,20 @@ input:focus {
 
 .nav li a {
   color: white;
+}
+
+#container > div > nav > div > div > div > a {
+  color: white;
+}
+
+
+#container > div > nav > div > div > div > a:hover {
+  color: 	#E8E8E8;
+}
+
+
+#container > div > nav > div > div > div{
+  margin: 15px;
 }
 
 .nav li {

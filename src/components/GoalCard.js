@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import JoinGoal from './modals/JoinGoal.js';
 import Card from "react-bootstrap/Card";
-import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 
@@ -28,7 +27,6 @@ export default class GoalCard extends Component {
 
     var modalClose = () => this.setState({ modalShow: false });
     const { open } = this.state;
-    var commentOpen = () => this.setState({open: true});
 
     return (
       <Card
@@ -72,13 +70,13 @@ export default class GoalCard extends Component {
               <button className="btn btn-light" onClick={() => this.delete(item.key)}> Delete </button>
             </div>
           </div>
-          <Collapse in={open}>
-            <div>
-              <Card.Body>
-                <input placeholder="Write a comment" className="form-control-plaintext"></input>
-              </Card.Body>
-            </div>
-          </Collapse>
+            <Collapse in={open}>
+              <div>
+                <Card.Body>
+                  <input placeholder="Write a comment" className="form-control-plaintext"></input>
+                </Card.Body>
+              </div>
+            </Collapse>
         </div>
       </Card>
   )};
